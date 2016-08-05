@@ -5,21 +5,21 @@ typedef struct _vec2 {
 	float y;
 } vec2;
 
-static inline vec2 set2(double a) {
+static inline vec2 set2d(double a) {
 	vec2 b;
 	b.x = (float)a;
 	b.y = (float)(a - b.x);
 	return b;
 }
 
-static inline vec2 set2(float a) {
+static inline vec2 set2f(float a) {
 	vec2 b;
 	b.x = a;
 	b.y = 0.f;
 	return b;
 }
 
-static inline vec2 set2(float a, float b) {
+static inline vec2 set2ff(float a, float b) {
 	vec2 c;
 	c.x = a;
 	c.y = b;
@@ -48,7 +48,7 @@ static inline vec2 add2(const vec2 a, const vec2 b) {
 }
 
 static inline vec2 neg2(vec2 a) {
-	return set2(-a.x, -a.y);
+	return set2ff(-a.x, -a.y);
 }
 
 // Based on dssub from DSFUN90

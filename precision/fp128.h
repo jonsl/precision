@@ -1,5 +1,7 @@
 #pragma once
 
+//CPP
+
 typedef unsigned int uint;
 
 typedef struct _uint4 {
