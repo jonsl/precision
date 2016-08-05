@@ -1,14 +1,17 @@
 
 #include <stdio.h>
 #include <math.h>
-//#include "fp128.h"
+#include "fp128.h"
 #include "vec2.h"
 
 int main() {
-	//// fixed point test
-	//uint4 a = set128(2, 0x80000000, 0, 0);
-	//uint4 b = inc128(a);
-	//uint4 c = neg128(a);
+	// fixed point test
+	uint4 a = set128xyzw(2, 0x80000000, 0, 0);
+	printf("a = {%x, %x, %x, %x}", a.x, a.y, a.z, a.w);
+	uint4 b = inc128(a);
+	printf("b = {%x, %x, %x, %x}", b.x, b.y, b.z, b.w);
+	uint4 c = neg128(b);
+	printf("c = {%x, %x, %x, %x}", c.x, c.y, c.z, c.w);
 
 	// double float test
 	unsigned int const sizeof_double = sizeof(double);
