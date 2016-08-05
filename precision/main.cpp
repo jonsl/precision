@@ -23,11 +23,23 @@ int main() {
 	vec2 ds_two = set2(d_two);
 	double two = (double)ds_two.x + (double)ds_two.y;
 
+	double r;
+	double result;
+
+	// add2 test
 	vec2 ds_a = add2(ds_one, ds_two);
+	r = (double)ds_one.x + (double)ds_one.y + (double)ds_two.x + (double)ds_two.y;
+	result = (double)ds_a.x + (double)ds_a.y;
 
-	double r = (double)ds_one.x + (double)ds_one.y + (double)ds_two.x + (double)ds_two.y;
+	// sub2 test
+	vec2 ds_s = sub2(ds_one, ds_two);
+	r = ((double)ds_one.x + (double)ds_one.y) - ((double)ds_two.x + (double)ds_two.y);
+	result = (double)ds_s.x + (double)ds_s.y;
 
-	double result = (double)ds_a.x + (double)ds_a.y;
+	// mul2 test
+	vec2 ds_m = mul2(ds_one, ds_two);
+	r = ((double)ds_one.x + (double)ds_one.y) * ((double)ds_two.x + (double)ds_two.y);
+	result = (double)ds_m.x + (double)ds_m.y;
 
 	return 0;
 }
